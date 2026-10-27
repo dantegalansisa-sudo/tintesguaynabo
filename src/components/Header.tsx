@@ -89,7 +89,7 @@ export default function Header({ ready }: { ready: boolean }) {
             transition={{ duration: 0.7, ease: EASINGS.premium }}
           >
             <div className="menu__top">
-              <Logo />
+              <Logo light />
               <LangToggle dark />
             </div>
             <nav className="menu__links">

@@ -15,7 +15,7 @@ export default function Footer() {
       <div className="container">
         <div className="footer__top">
           <div className="footer__brand">
-            <Logo />
+            <Logo light />
             <p>{t.footer.line}</p>
           </div>
           <div className="footer__cols">

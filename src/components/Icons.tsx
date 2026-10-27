@@ -69,10 +69,11 @@ export const Whatsapp = (p: P) => (
   </svg>
 );
 
-export function Logo({ large = false }: { large?: boolean }) {
+/** `light` = white lettering for dark backgrounds; default is ink lettering for the light header. */
+export function Logo({ light = false }: { light?: boolean }) {
   return (
-    <span className={`logo${large ? ' logo--large' : ''}`}>
-      <img src="/logo-sm.png" alt="KC Tintes Guaynabo" width={506} height={229} draggable={false} />
+    <span className="logo">
+      <img src={light ? '/logo-sm.png' : '/logo-dark-sm.png'} alt="KC Tintes Guaynabo" width={506} height={229} draggable={false} />
     </span>
   );
 }

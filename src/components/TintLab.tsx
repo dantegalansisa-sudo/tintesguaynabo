@@ -52,7 +52,7 @@ export default function TintLab() {
         </div>
 
         <div ref={ref} className="tint__view">
-          <motion.img src="/img/side.webp" alt="" style={{ y, scale: 1.18 }} loading="lazy" />
+          <motion.img src="/img/studio.webp" alt="" style={{ y, scale: 1.18 }} loading="lazy" />
           <motion.div className="tint__glass" animate={{ opacity: 0.08 + darkness * 0.86 }} transition={{ duration: 0.7, ease: EASINGS.premium }} />
           <div className="tint__reflect" />
           <div className="tint__frame" />

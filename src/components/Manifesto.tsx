@@ -36,7 +36,7 @@ export default function Manifesto() {
         </div>
         <div className="manifesto__foot">
           <div ref={img.ref} className="manifesto__img">
-            <motion.img src="/img/studio.webp" alt="" style={{ y: img.y, scale: 1.25 }} loading="lazy" />
+            <motion.img src="/img/interior-sm.webp" alt="" style={{ y: img.y, scale: 1.25 }} loading="lazy" />
           </div>
           <p className="manifesto__sign">— {t.manifesto.sign}</p>
         </div>

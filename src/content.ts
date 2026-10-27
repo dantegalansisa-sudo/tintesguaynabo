@@ -54,7 +54,7 @@ const es = {
         desc: 'Film de nano-cerámica que rechaza el calor infrarrojo sin oscurecer de más. La cabina se mantiene fresca y tu celular, GPS y radio funcionan sin interferencia.',
         bullets: ['Máximo rechazo de calor', 'Sin interferencia de señal', 'Claridad superior'],
         tag: 'Garantía de por vida',
-        img: 'car0',
+        img: 'tint',
       },
       {
         key: 'carbon',
@@ -72,7 +72,7 @@ const es = {
         desc: 'Film cerámico claro para el parabrisas que bloquea calor y rayos UV sin afectar tu visibilidad, más franja superior para reducir el reflejo del sol al manejar.',
         bullets: ['Film claro de alto rendimiento', 'Menos reflejo', 'Protege el tablero'],
         tag: '99% bloqueo UV',
-        img: 'p1',
+        img: 'studio',
       },
       {
         key: 'cut',
@@ -249,7 +249,7 @@ const en: Content = {
         desc: 'Nano-ceramic film that rejects infrared heat without going too dark. Your cabin stays cool and your phone, GPS and radio work with zero interference.',
         bullets: ['Maximum heat rejection', 'No signal interference', 'Superior clarity'],
         tag: 'Lifetime warranty',
-        img: 'car0',
+        img: 'tint',
       },
       {
         key: 'carbon',
@@ -267,7 +267,7 @@ const en: Content = {
         desc: 'Clear ceramic windshield film that blocks heat and UV without affecting visibility, plus a top visor strip to cut sun glare while driving.',
         bullets: ['High-performance clear film', 'Less glare', 'Protects your dashboard'],
         tag: '99% UV block',
-        img: 'p1',
+        img: 'studio',
       },
       {
         key: 'cut',

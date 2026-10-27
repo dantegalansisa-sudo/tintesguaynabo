@@ -38,11 +38,12 @@ export default function Hero({ ready }: { ready: boolean }) {
 
   const topX = useTransform(p, [0, 1], ['0%', mobile ? '-30%' : '-18%']);
   const botX = useTransform(p, [0, 1], ['0%', mobile ? '30%' : '18%']);
-  const carY = useTransform(p, [0, 1], mobile ? ['0vh', '-28vh'] : ['0vh', '18vh']);
-  const carScale = useTransform(p, [0, 1], mobile ? [1, 0.9] : [1, 0.86]);
-  const carRot = useTransform(p, [0, 1], mobile ? [-3, 4] : [-4, -10]);
+  const carY = useTransform(p, [0, 1], mobile ? ['0vh', '-55vh'] : ['0vh', '22vh']);
+  const carScale = useTransform(p, [0, 1], mobile ? [1, 1.08] : [1, 0.82]);
+  const carRot = useTransform(p, [0, 1], mobile ? [0, 0] : [0, -6]);
   const fade = useTransform(p, [0, 0.6], [1, 0]);
 
+  const car = mobile ? '/img/car-top-v-sm.webp' : '/img/car-top.webp';
   const after = 1.15;
 
   return (
@@ -56,27 +57,12 @@ export default function Hero({ ready }: { ready: boolean }) {
         <motion.div className="hero__car" style={{ y: carY, scale: carScale, rotate: carRot }}>
           <motion.div
             className="hero__car-drive"
-            initial={{ y: '110vh', rotate: 8, filter: 'blur(8px)' }}
-            animate={ready ? { y: 0, rotate: 0, filter: 'blur(0px)' } : {}}
-            transition={{ duration: 1.6, delay: 0.25, ease: [0.16, 1, 0.3, 1] }}
+            initial={mobile ? { y: '110vh', filter: 'blur(6px)' } : { x: '90vw', filter: 'blur(8px)' }}
+            animate={ready ? (mobile ? { y: 0, filter: 'blur(0px)' } : { x: 0, filter: 'blur(0px)' }) : {}}
+            transition={{ duration: 1.7, delay: 0.25, ease: [0.16, 1, 0.3, 1] }}
           >
-            <div className="hero__reel">
-              <video
-                className="hero__video"
-                src="/video/hero.mp4"
-                poster="/img/heroposter.webp"
-                autoPlay
-                muted
-                loop
-                playsInline
-                preload="auto"
-                aria-label="Cadillac con tinte cerámico en el estudio de KC Tintes Guaynabo"
-              />
-              <div className="hero__shine" aria-hidden />
-              <span className="hero__live">
-                <i /> {t.hero.badge}
-              </span>
-            </div>
+            <img src={car} alt="Porsche 911 en el estudio de KC Tintes Guaynabo" className="hero__car-img" draggable={false} />
+            <div className="hero__shine" style={{ WebkitMaskImage: `url(${car})`, maskImage: `url(${car})` }} aria-hidden />
           </motion.div>
         </motion.div>
 
